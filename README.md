@@ -2,5 +2,8 @@
 
 Steps: 
 1. Fetch the latest nginx base image 
-2. Copy index.html to container location /usr/share/nginx/html
-3. http://localhost
+2. Remove old nginx conf file at location: /etc/nginx/conf.d/default.conf
+3. Copy custom nginx conf file from this repo nginx.conf to image location: /etc/nginx/conf.d/default.conf
+4. Copy index.html file from this repo to image location /usr/share/nginx/html/index.html
+5. Expose port 80 
+6. Check the web at http://localhost
